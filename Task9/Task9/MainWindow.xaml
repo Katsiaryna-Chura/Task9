@@ -1,0 +1,44 @@
+﻿<Window x:Class="Task9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="463.953" Width="807.558" ResizeMode="NoResize">
+    <Grid Background="#FFE5F0FF">
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="701,391,0,0" VerticalAlignment="Top" Width="75" Click="btnClose_Click" Foreground="#FF040FB7" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6F8FC"/>
+                    <GradientStop Color="#FF9FBBFA" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSelectDir" Content="Select Directory" HorizontalAlignment="Left" Margin="603,19,0,0" VerticalAlignment="Top" Width="111" Click="btnSelectDir_Click" Foreground="#FF040FB7" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6F8FC" Offset="0"/>
+                    <GradientStop Color="#FF9FBBFA" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="tbSelectedDir" HorizontalAlignment="Left" Height="23" Margin="19,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="568" TextChanged="tbSelectedDir_TextChanged" IsEnabled="False" BorderBrush="#FF040FB7" Foreground="#FF040FB7" FontSize="14"/>
+        <ListBox x:Name="lbDllList" HorizontalAlignment="Left" Height="267" Margin="19,101,0,0" VerticalAlignment="Top" Width="188" SelectionChanged="lbDllList_SelectionChanged" FontSize="14" BorderBrush="#FF040FB7" Foreground="#FF040FB7"/>
+        <Label x:Name="labelDllList" Content="List of dlls in the directory:" HorizontalAlignment="Left" Margin="19,70,0,0" VerticalAlignment="Top" Width="188" FontSize="14" Foreground="#FF040FB7" FontWeight="Bold"/>
+        <ListBox x:Name="lbTypeList" HorizontalAlignment="Left" Height="267" Margin="225,101,0,0" VerticalAlignment="Top" Width="273" SelectionChanged="lbTypeList_SelectionChanged" RenderTransformOrigin="0.5,0.5" FontSize="14" BorderBrush="#FF040FB7" Foreground="#FF040FB7"/>
+        <Label x:Name="labelTypeList" Content="List of types in the dll:" HorizontalAlignment="Left" Margin="225,70,0,0" VerticalAlignment="Top" FontSize="14" Width="179" Foreground="#FF040FB7" FontWeight="Bold"/>
+        <ComboBox x:Name="cbVariant" HorizontalAlignment="Left" Margin="196,391,0,0" VerticalAlignment="Top" Width="173" Loaded="cbVariant_Loaded" SelectionChanged="cbVariant_SelectionChanged" RenderTransformOrigin="0.275,0.594" Foreground="#FF040FB7" FontSize="14">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FF9FBBFA" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <ListBox x:Name="lbMemberList" HorizontalAlignment="Left" Height="267" Margin="516,104,0,0" VerticalAlignment="Top" Width="260" FontSize="14" BorderBrush="#FF040FB7" Foreground="#FF040FB7"/>
+        <Label x:Name="labelMemberType" Content="Select type of member:" HorizontalAlignment="Left" Margin="19,387,0,0" VerticalAlignment="Top" Width="172" FontSize="14" Foreground="#FF040FB7" FontWeight="Bold"/>
+        <Label x:Name="labelMemberList" Content="List of members of the type:" HorizontalAlignment="Left" Margin="516,70,0,0" VerticalAlignment="Top" Width="198" FontSize="14" Foreground="#FF040FB7" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
